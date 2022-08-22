@@ -23,6 +23,7 @@ public class KillPlayer : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
+            //Restarts scene
             Scene currentScene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(currentScene.name);
             //player.transform.position = respawnPoint.position;
