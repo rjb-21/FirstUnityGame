@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask playerMask;
 
     public int coins;
+    public TextMeshProUGUI result;
 
     private bool jumpKeyWasPressed;
     private float horizontalInput;
@@ -68,6 +70,7 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
             superJumpsRemaining++;
             coins++;
+            result.text = coins.ToString();
         }
     }
 
